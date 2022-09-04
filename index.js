@@ -9,6 +9,7 @@ function renderMovies(data){
     //let list = document.getElementsByClassName('movies');
 
     ul = document.createElement('ul');
+    ul.classList.add("movies")
 
     document.getElementById('movies').appendChild(ul);
     
