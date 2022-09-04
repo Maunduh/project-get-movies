@@ -6,6 +6,19 @@ function fetchMovies() {
 }
 function renderMovies(data){
     console.log(data)
+    //let list = document.getElementsByClassName('movies');
+
+    ul = document.createElement('ul');
+
+    document.getElementById('movies').appendChild(ul);
+    
+
+    data.results.forEach(item => {
+        let li = document.createElement('li');
+        ul.appendChild(li);
+    
+        li.innerHTML += item.original_title;
+    });
 }
 
 fetchMovies();
