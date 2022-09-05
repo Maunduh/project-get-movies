@@ -1,6 +1,27 @@
+*{
+max-width: 100%;
+}
+h1{
+    display: flex;
+    align-self: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 ul{
 list-style-type: circle;
 }
 .movies{
     color:red ;
+}
+ul{
+    display:inline;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30%;
+}
+li{
+    align-items: center;
+    justify-self: center;
+    display: block;
+    color: black;
 }

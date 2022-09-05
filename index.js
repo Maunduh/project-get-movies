@@ -23,7 +23,16 @@ function renderMovies(data){
         li.innerHTML += item.original_title;
         let p=document.createElement('p');
         li.appendChild(p);
-        p.innerHTML +=item.overview;
+        p.innerHTML +=item.overview; 
+        
+        
+        p.innerHTML +=item.release_date;
+        p.innerHTML +=item.vote_count;
+        
+        
+
+        
+
     });
 }
-
+fetchMovies()
