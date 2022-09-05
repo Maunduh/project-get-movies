@@ -21,13 +21,20 @@ function renderMovies(data){
         ul.appendChild(li);
     
         li.innerHTML += item.original_title;
-        let p=document.createElement('p');
-        li.appendChild(p);
-        p.innerHTML +=item.overview; 
+        let overview=document.createElement('p');
+        li.appendChild(overview);
+
+        overview.innerHTML +="Overview: " + item.overview; 
+
+        let release_date=document.createElement('p');
         
-        
-        p.innerHTML +=item.release_date;
-        p.innerHTML +=item.vote_count;
+        release_date.innerHTML +="Release Date:" + item.release_date;
+        li.appendChild(release_date);
+
+        let vote_count=document.createElement('p');
+        li.appendChild(vote_count);
+
+         vote_count.innerHTML += 'vote count' +item.vote_count;
         
         
 

@@ -3,7 +3,6 @@ max-width: 100%;
 }
 h1{
     display: flex;
-    align-self: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
