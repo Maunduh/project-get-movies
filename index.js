@@ -34,7 +34,7 @@ function renderMovies(data){
         let vote_count=document.createElement('p');
         li.appendChild(vote_count);
 
-         vote_count.innerHTML += 'vote count' +item.vote_count;
+         vote_count.innerHTML += 'vote count:' +item.vote_count;
         
         
 
@@ -43,3 +43,4 @@ function renderMovies(data){
     });
 }
 fetchMovies()
+
