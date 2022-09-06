@@ -1,6 +1,6 @@
 *{
 max-width: 100%;
-background-color: chartreuse;
+background-color: lightskyblue;
 }
 h1{
 
@@ -25,6 +25,7 @@ li{
     align-items: center;
     justify-self: center;
     display: block;
+    font-size: 1.2rem;
     
 }
 P{
