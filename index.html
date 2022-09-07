@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consuming moviesdb Api</title>
+    <script src="index.js"></script>
  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>get movies</h1>
-
-<div id="movies"></div>
+    <header>
+        <h1>moviesdb</h1>
+        <form id="form">
+          <input id="search" type="text" placeholder="search" class="search" />
+          <button id="Enter">Enter</button>
+          
+        </form>
+      </header>
+      <div id="main"></div>
+      <div id="comment-section">
+        <input id="comment-box" type="text" placeholder="Enter comment" />
+        <button id="comment">comment</button>
+        <ul id="unordered"></ul>
+      </div>
     
-    <script src="index.js"></script>
+    
 </body>
 </html>
