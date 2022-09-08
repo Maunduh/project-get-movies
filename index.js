@@ -49,9 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://api.themoviedb.org/3/discover/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
     getMovies(api_url);
     function getMovies(url) {
+        
         fetch(url)
             .then((res) => res.json())
-            .then((results) => renderMovies(results.results));
+            .then((results) => renderMovies(results.results))
+            .catch((error)=>{
+                console.log(error)
+            });
     }
     function renderMovies(movies) {
         
@@ -77,16 +81,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-    let button= document.querySelector("button");
-    button.addEventListener("submit", (event) => {
+    let form= document.querySelector("#form"); 
+    
+    form.addEventListener("submit", (event) => {
         event.preventDefault();
+        debugger
+        const search = document.querySelector("#search");
+        const searchItem = search.value;
         let search_api=
-            "https://api.themoviedb.org/3/discover/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
-       const search = document.querySelector("#search");
-        const searchItem = search.item;
+            "https://api.themoviedb.org/3/search/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&include_adult=false&include_video=false&page=1&query="+searchItem;
+       
+        
         if (searchItem) {
-            getMovies(search_api + searchItem);
-            search.item = "";
+            getMovies(search_api);
+            search.value = "";
         }
    
     });
