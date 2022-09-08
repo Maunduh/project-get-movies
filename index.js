@@ -76,39 +76,31 @@ document.addEventListener("DOMContentLoaded", function () {
             main.appendChild(movieDisplay);
         });
     }
-    document.querySelector("#form").addEventListener("submit", (event)=>{
+    
+    let button= document.querySelector("button");
+    button.addEventListener("submit", (event) => {
         event.preventDefault();
-        let search = document.querySelector("#search");
-        let searchItem = search.item;
+        let search_api=
+            "https://api.themoviedb.org/3/discover/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+       const search = document.querySelector("#search");
+        const searchItem = search.item;
         if (searchItem) {
-            const search_api="https://api.themoviedb.org/3/discover/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1"
             getMovies(search_api + searchItem);
             search.item = "";
         }
-    })
-    // const form = document.querySelector("#form");
-    // form.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     const searchAPI =
-    //         "https://api.themoviedb.org/3/discover/movie?api_key=8c428d12cd39a89cbf5c7d1347ece57d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
-    //    const search = document.querySelector("#search");
-        // const searchValue = search.value;
-        // if (searchValue) {
-        //     getMovies(searchAPI + searchValue);
-        //     search.value = "";
-    //     }
-    // });
+   
+    });
 
-    // const post = document.querySelector("#post");
-    // post.addEventListener("click", function () {
+    const post = document.querySelector("#comment");
+    post.addEventListener("click", function () {
 
-    //     const commentBox = document.querySelector("#comment-box").value;
-    //     commentBox.value=''
-    //     const li = document.createElement("li");
-    //     const text = document.createTextNode(commentBox);
-    //     li.appendChild(text);
-    //     document.getElementById("unordered").appendChild(li);
+        const commentBox = document.querySelector("#comment-box").value;
+        commentBox.value=''
+        const li = document.createElement("li");
+        const text = document.createTextNode(commentBox);
+        li.appendChild(text);
+        document.getElementById("unordered").appendChild(li);
        
 
-    // });
+    });
 });

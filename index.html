@@ -7,15 +7,21 @@
     <title>consuming moviesdb Api</title>
     <script src="index.js"></script>
  <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <header>
         <h1>moviesdb</h1>
+        <hr>
+        <div class="form">
         <form id="form">
-          <input id="search" type="text" placeholder="search" class="search" />
-          <button id="Enter">Enter</button>
-          
+            
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"> <i class="fa fa-search"></i></button>
+              
         </form>
+    </div>
       </header>
       <div id="main"></div>
       <div id="comment-section">
