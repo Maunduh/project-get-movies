@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-        debugger
+    
         const search = document.querySelector("#search");
         const searchItem = search.value;
         let search_api=
